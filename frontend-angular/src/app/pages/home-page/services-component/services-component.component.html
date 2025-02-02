@@ -1,0 +1,49 @@
+<section class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="owl-service-item owl-carousel owl-loaded owl-drag">
+
+          <div class="owl-stage-outer">
+            <div class="owl-stage"
+                 style="transform: translate3d(0px, 0px, 0px); transition: 0.25s; width: 3542px;">
+              <div class="owl-item cloned" style="width: 292px; margin-right: 30px;">
+                <div class="item">
+                  <div class="icon">
+                    <img alt="" height="60" ngSrc="/assets/images/service-icon-03.png" width="60">
+                  </div>
+                  <div class="down-content">
+                    <h4>Best Students</h4>
+                    <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
+                      vestibulum.</p>
+                  </div>
+                </div>
+              </div>
+              <div *ngFor="let service of services" class="owl-item cloned" style="width: 292px; margin-right: 30px;">
+                <div class="item">
+                  <div class="icon">
+                    <img [height]="image.height" [ngSrc]="service.icon" [width]="image.width" alt="">
+                  </div>
+                  <div class="down-content">
+                    <h4>{{ service.title }}</h4>
+                    <p>{{ service.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="owl-nav">
+            <button class="owl-prev" role="presentation" type="button"><span aria-label="Previous">‹</span>
+            </button>
+            <button class="owl-next" role="presentation" type="button"><span aria-label="Next">›</span>
+            </button>
+          </div>
+          <div class="owl-dots">
+            <button class="owl-dot" role="button"><span></span></button>
+            <button class="owl-dot active" role="button"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

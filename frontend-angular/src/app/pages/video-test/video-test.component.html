@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>Video API Test Page</h1>
+
+  <!-- Create Video Form -->
+  <div>
+    <h3>Create Video</h3>
+    <form (ngSubmit)="createVideo()">
+      <input [(ngModel)]="video.title" name="title" placeholder="Title" required/>
+      <input [(ngModel)]="video.description" name="description" placeholder="Description" required/>
+      <input [(ngModel)]="video.url" name="url" placeholder="Video URL" required/>
+      <button type="submit">Create Video</button>
+    </form>
+  </div>
+
+  <!-- Update Video Form -->
+  <div>
+    <h3>Update Video</h3>
+    <input [(ngModel)]="videoId" placeholder="Video ID to Update"/>
+    <input [(ngModel)]="updatedVideo.title" placeholder="Updated Title"/>
+    <input [(ngModel)]="updatedVideo.description" placeholder="Updated Description"/>
+    <input [(ngModel)]="updatedVideo.url" placeholder="Updated URL"/>
+    <button (click)="updateVideo()">Update Video</button>
+  </div>
+
+  <!-- Get Video by ID -->
+  <div>
+    <h3>Get Video by ID</h3>
+    <input [(ngModel)]="videoId" placeholder="Enter Video ID"/>
+    <button (click)="getVideoById()">Get Video</button>
+  </div>
+
+  <!-- Video List -->
+  <div>
+    <h3>Video List</h3>
+    <ul>
+      <li *ngFor="let video of videos">
+        <span>{{ video.title }}</span>
+        <button (click)="deleteVideo(video.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Message Display -->
+  <div *ngIf="message">
+    <p>{{ message }}</p>
+  </div>
+</div>

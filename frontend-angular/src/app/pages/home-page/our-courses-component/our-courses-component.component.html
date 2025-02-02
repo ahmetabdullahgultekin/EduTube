@@ -1,0 +1,53 @@
+<section class="our-courses" id="courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading">
+          <h2>Our Popular Courses</h2>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="owl-courses-item owl-carousel owl-loaded owl-drag">
+          <div class="owl-stage-outer">
+            <div *ngIf="courses" [ngStyle]="owlStageStyle" class="owl-stage">
+              <div *ngFor="let course of courses" [ngStyle]="owlStageStyle.owlItem" class="owl-item">
+                <div class="item">
+                  <img [height]="owlStage.owlImage.height"
+                       [ngSrc]="course.image" [width]="owlStage.owlImage.width" alt="">
+                  <div class="down-content">
+                    <h4>{{ course.title }}</h4>
+                    <div class="info">
+                      <div class="row">
+                        <div class="col-8">
+                          <ul>
+                            <li *ngFor="let star of [].constructor(course.rating)">
+                              <i class="fa fa-star"></i>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-4">
+                          <span>{{ course.price }}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="owl-nav">
+            <button (click)="prev()" class="owl-prev" role="presentation" type="button"><span
+              aria-label="Previous">‹</span></button>
+            <button (click)="next()" class="owl-next" role="presentation" type="button"><span aria-label="Next">›</span>
+            </button>
+          </div>
+          <div class="owl-dots">
+            <button class="owl-dot" role="button"><span></span></button>
+            <button class="owl-dot" role="button"><span></span></button>
+            <button class="owl-dot active" role="button"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
