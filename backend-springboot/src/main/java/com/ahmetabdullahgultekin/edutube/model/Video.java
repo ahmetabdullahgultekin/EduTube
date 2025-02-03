@@ -1,7 +1,10 @@
 package com.ahmetabdullahgultekin.edutube.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
@@ -24,6 +27,15 @@ public class Video {
     @Getter
     @Setter
     private String title;
+    @Column(columnDefinition = "TEXT")
+    @Getter
+    @Setter
+    private String videoUrl;
+    @Column(columnDefinition = "TEXT")
+    @Getter
+    @Setter
+    private int duration; // in seconds
+    private LocalDateTime uploadedAt = LocalDateTime.now();
 
     public String getTitle() {
         return title;
@@ -33,11 +45,6 @@ public class Video {
         this.title = title;
     }
 
-    @Column(columnDefinition = "TEXT")
-    @Getter
-    @Setter
-    private String videoUrl;
-
     public String getVideoUrl() {
         return videoUrl;
     }
@@ -45,12 +52,5 @@ public class Video {
     public void setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
     }
-
-    @Column(columnDefinition = "TEXT")
-    @Getter
-    @Setter
-    private int duration; // in seconds
-
-    private LocalDateTime uploadedAt = LocalDateTime.now();
 }
 

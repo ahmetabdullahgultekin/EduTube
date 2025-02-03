@@ -2,7 +2,10 @@ package com.ahmetabdullahgultekin.edutube.controller;
 
 import com.ahmetabdullahgultekin.edutube.model.User;
 import com.ahmetabdullahgultekin.edutube.service.AuthService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 

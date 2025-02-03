@@ -7,6 +7,7 @@ import com.ahmetabdullahgultekin.edutube.security.JwtUtil;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
 import java.util.Optional;
 
 @Service

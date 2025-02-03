@@ -12,6 +12,14 @@ export const routes: Routes = [
     component: HomePageComponent
   },
   {
+    path: 'meetings',
+    loadComponent: () => import('./pages/meetings-page/meetings-page.component').then(m => m.MeetingsPageComponent)
+  },
+  {
+    path: 'meeting-details',
+    loadComponent: () => import('./pages/meeting-details-page/meeting-details-page.component').then(m => m.MeetingDetailsPageComponent)
+  },
+  {
     path: 'about',
     loadComponent: () => import('./pages/about-page/about-page.component').then(m => m.AboutPageComponent)
   },

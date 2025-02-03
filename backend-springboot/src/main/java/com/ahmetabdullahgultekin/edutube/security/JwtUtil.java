@@ -1,17 +1,18 @@
 package com.ahmetabdullahgultekin.edutube.security;
 
-import io.jsonwebtoken.*;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;
+
 import java.security.Key;
 import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private static final String SECRET_KEY = "YourSuperSecretKeyThatShouldBeLongEnoughForSecurity";
     private static final long EXPIRATION_TIME = 86400000; // 1 day
 
-    private final Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+    private final Key key = Keys.secretKeyFor(io.jsonwebtoken.SignatureAlgorithm.HS256);
 
     public String generateToken(String email) {
         return Jwts.builder()

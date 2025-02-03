@@ -45,7 +45,7 @@ export class RegisterPageComponent {
           });
         },
         error: (error) => {
-          this.errorMessage = error.error.message;
+          this.errorMessage = error.error.message || 'Registration failed!';
         }
       });
     }

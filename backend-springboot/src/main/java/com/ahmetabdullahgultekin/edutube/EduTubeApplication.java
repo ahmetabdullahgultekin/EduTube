@@ -6,8 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class EduTubeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(EduTubeApplication.class, args);
-	}
+    public static void main(String[] args) {
+        //KeyGenerator.generateSecretKey();
+        SpringApplication.run(EduTubeApplication.class, args);
+    }
 
 }

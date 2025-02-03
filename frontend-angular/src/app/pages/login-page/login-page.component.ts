@@ -37,10 +37,14 @@ export class LoginPageComponent {
         .subscribe({
           next: (response) => {
             localStorage.setItem('token', response.token);
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/dashboard']).then(r => {
+                console.log('Navigated to dashboard');
+                this.errorMessage = 'Login successful!';
+              }
+            );
           },
           error: (error) => {
-            this.errorMessage = error.error.message || 'Login failed';
+            this.errorMessage = error.error.message || 'Login failed!';
           }
         });
     }

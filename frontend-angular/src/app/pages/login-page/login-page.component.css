@@ -2,6 +2,7 @@
 section {
   min-height: 100vh;
   align-content: center;
+  background-image: url(/assets/images/background1.webp) !important;
 }
 
 .container {
@@ -9,11 +10,11 @@ section {
   max-width: 400px;
   margin: auto;
   padding: 20px;
-  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background-image: url(/assets/images/background1.webp) !important;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
 }
 
 /* Form Inputs */

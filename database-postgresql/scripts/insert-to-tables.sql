@@ -1,10 +1,10 @@
 -- Inserting Users
 INSERT INTO users (name, email, password, role) VALUES
-('Alice Johnson', 'alice@example.com', 'password123', 'instructor'),
-('Bob Smith', 'bob@example.com', 'password123', 'student'),
-('Charlie Brown', 'charlie@example.com', 'password123', 'admin'),
-('David Williams', 'david@example.com', 'password123', 'student'),
-('Eva Green', 'eva@example.com', 'password123', 'instructor');
+('Alice Johnson', 'alice@example.com', 'password123', 1),
+('Bob Smith', 'bob@example.com', 'password123', 0),
+('Charlie Brown', 'charlie@example.com', 'password123', 2),
+('David Williams', 'david@example.com', 'password123', 0),
+('Eva Green', 'eva@example.com', 'password123', 1);
 
 -- Inserting Courses
 INSERT INTO courses (title, description, instructor_id, price) VALUES

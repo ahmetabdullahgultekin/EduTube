@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Video} from '../interfaces/video';
-import {environment} from '../environments/environment'; // Assuming you have an environment file
+import {environment} from '../../environments/environment'; // Assuming you have an environment file
 
 @Injectable({
   providedIn: 'root'

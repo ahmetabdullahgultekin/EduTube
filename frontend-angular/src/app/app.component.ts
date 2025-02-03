@@ -5,7 +5,8 @@ import {
   NavigationBarComponentComponent
 } from './shared-components/navigation-bar-component/navigation-bar-component.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +16,18 @@ import {HttpClientModule} from '@angular/common/http';
     NavigationBarComponentComponent,
     HttpClientModule,
     FormsModule,
+    TranslateModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'frontend-angular';
+  title = 'EduTube';
 
+  constructor(public translateService: TranslateService) {
+  }
+
+  public changeLanguage(language: string): void {
+    this.translateService.use(language);
+  }
 }
