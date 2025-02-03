@@ -6,7 +6,7 @@ import {
 } from './shared-components/navigation-bar-component/navigation-bar-component.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+//import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate
     NavigationBarComponentComponent,
     HttpClientModule,
     FormsModule,
-    TranslateModule
+    //TranslateModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -24,10 +24,12 @@ import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate
 export class AppComponent {
   title = 'EduTube';
 
-  constructor(public translateService: TranslateService) {
-  }
+  /*
+  constructor(public translateService: TranslateService) {}
 
   public changeLanguage(language: string): void {
     this.translateService.use(language);
   }
+
+   */
 }
