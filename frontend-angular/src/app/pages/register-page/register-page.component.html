@@ -26,7 +26,13 @@
         </div>
       </div>
 
-      <button [disabled]="registerForm.invalid" type="submit">Register</button>
+      <button [disabled]="registerForm.invalid" [ngStyle]="{
+              'background-color': registerForm.invalid ? '#ccc' : '#007bff',
+               'color': registerForm.invalid ? '#000' : '#fff',
+                'cursor': registerForm.invalid ? 'not-allowed' : 'pointer'
+              }" type="submit">
+        Register
+      </button>
       <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
     </form>
     <p>Already have an account? <a routerLink="/login">Login here</a></p>

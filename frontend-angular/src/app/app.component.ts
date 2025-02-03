@@ -5,7 +5,8 @@ import {
   NavigationBarComponentComponent
 } from './shared-components/navigation-bar-component/navigation-bar-component.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
+
 //import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 
 @Component({

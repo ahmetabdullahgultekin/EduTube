@@ -44,6 +44,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/login-page/login-page.component').then(m => m.LoginPageComponent)
   },
   {
+    path: 'dashboard',
+    loadComponent: () => import('./pages/dashboard-page/dashboard-page.component').then(m => m.DashboardPageComponent)
+  },
+  {
     path: '**',
     loadComponent: () => import('./pages/not-found-page/not-found-page.component').then(m => m.NotFoundPageComponent)
   }

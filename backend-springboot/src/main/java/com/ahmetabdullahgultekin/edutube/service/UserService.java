@@ -2,7 +2,6 @@ package com.ahmetabdullahgultekin.edutube.service;
 
 import com.ahmetabdullahgultekin.edutube.model.User;
 import com.ahmetabdullahgultekin.edutube.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

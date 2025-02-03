@@ -18,7 +18,14 @@
         </div>
       </div>
 
-      <button [disabled]="loginForm.invalid" type="submit">Login</button>
+      <button [disabled]="loginForm.invalid" [ngStyle]="{
+              'background-color': loginForm.invalid ? '#ccc' : '#007bff',
+               'color': loginForm.invalid ? '#000' : '#fff',
+                'cursor': loginForm.invalid ? 'not-allowed' : 'pointer'
+              }"
+              type="submit">
+        Login
+      </button>
       <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
     </form>
     <p>Don't have an account? <a routerLink="/register">Register here</a></p>

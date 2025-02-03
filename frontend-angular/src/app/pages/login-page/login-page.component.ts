@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Router, RouterLink} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
-import {NgIf} from '@angular/common';
+import {NgIf, NgStyle} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 
 @Component({
@@ -12,7 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     NgIf,
-    HttpClientModule
+    HttpClientModule,
+    NgStyle
   ],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css',
@@ -32,6 +33,7 @@ export class LoginPageComponent {
   }
 
   login() {
+    this.errorMessage = '';
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value.email, this.loginForm.value.password)
         .subscribe({
@@ -45,8 +47,13 @@ export class LoginPageComponent {
           },
           error: (error) => {
             this.errorMessage = error.error.message || 'Login failed!';
+          },
+          complete: () => {
+            this.errorMessage = 'Login failed!';
           }
         });
+    } else {
+      this.errorMessage = 'Invalid form data';
     }
   }
 }

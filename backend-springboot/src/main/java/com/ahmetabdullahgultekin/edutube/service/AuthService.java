@@ -24,6 +24,9 @@ public class AuthService {
 
     public String register(User user) {
         try {
+            user.setPassword(
+                    passwordEncoder.encode(user.getPassword())
+            );
             userRepository.save(user);
         } catch (DataIntegrityViolationException ex) {
             throw new EmailAlreadyExistsException("Email already exists: " + user.getEmail());
@@ -33,6 +36,8 @@ public class AuthService {
 
     public String login(String email, String password) {
         Optional<User> user = userRepository.findByEmail(email);
+        System.out.println("raw password: " + password);
+        System.out.println("encoded password: " + (user.isPresent() ? user.get().getPassword() : "null"));
         if (user.isPresent() && passwordEncoder.matches(password, user.get().getPassword())) {
             return jwtUtil.generateToken(email);
         }
