@@ -36,17 +36,26 @@ export class RegisterPageComponent {
   register() {
     if (this.registerForm.valid) {
       this.authService.register(
-        this.registerForm.value.name,
-        this.registerForm.value.email,
-        this.registerForm.value.password
+        {
+          name: this.registerForm.value.name,
+          email: this.registerForm.value.email,
+          password: this.registerForm.value.password
+        }
       ).subscribe({
-        next: () => {
-          this.router.navigate(['/login']).then(r => {
-            this.errorMessage = 'Registration successful!';
-          });
+        next: (response) => {
+          localStorage.setItem('token', response.token);
+          this.router.navigate(['/dashboard']).then(r => {
+              //this.errorMessage = 'Registration successful!';
+              // Reload the page to update the navigation bar
+              window.location.reload();
+            }
+          );
         },
         error: (error) => {
-          this.errorMessage = error.error.message || 'Registration failed!';
+          this.errorMessage = error.error;
+        },
+        complete: () => {
+          this.errorMessage = 'Registration completed!';
         }
       });
     } else {

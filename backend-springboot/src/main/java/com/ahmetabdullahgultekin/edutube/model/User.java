@@ -31,7 +31,7 @@ public class User {
     @Column(nullable = false)
     @NotBlank(message = "Password is required")
     private String password;
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role = Role.STUDENT;
 

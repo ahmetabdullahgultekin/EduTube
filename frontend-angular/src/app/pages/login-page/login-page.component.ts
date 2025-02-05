@@ -40,16 +40,17 @@ export class LoginPageComponent {
           next: (response) => {
             localStorage.setItem('token', response.token);
             this.router.navigate(['/dashboard']).then(r => {
-                console.log('Navigated to dashboard');
+                // Reload the page to update the navigation bar
+                window.location.reload();
                 this.errorMessage = 'Login successful!';
               }
             );
           },
           error: (error) => {
-            this.errorMessage = error.error.message || 'Login failed!';
+            this.errorMessage = error.error.message;
           },
           complete: () => {
-            this.errorMessage = 'Login failed!';
+            this.errorMessage = 'Login completed!';
           }
         });
     } else {

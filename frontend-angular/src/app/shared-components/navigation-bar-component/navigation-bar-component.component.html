@@ -79,14 +79,22 @@
                 <i class="fa fa-user"></i>
               </a>
               <ul class="sub-menu">
-                <li>
+                <li *ngIf="!isLoggedIn">
                   <a routerLink="/register" routerLinkActive="active">
                     Register
                   </a>
                 </li>
+                <li *ngIf="isLoggedIn">
+                  <a routerLink="/dashboard" routerLinkActive="active">
+                    Dashboard
+                  </a>
+                </li>
                 <li>
-                  <a routerLink="/login" routerLinkActive="active">
+                  <a *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active">
                     Login
+                  </a>
+                  <a (click)="logout()" *ngIf="isLoggedIn" routerLink="/login" routerLinkActive="active">
+                    Logout
                   </a>
                 </li>
               </ul>

@@ -1,13 +1,11 @@
-/*
-
-CREATE DATABASE edutube
+--CREATE DATABASE edutube
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
+    name VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    password_hash TEXT NOT NULL,
-    role VARCHAR(20) CHECK (role IN ('student', 'instructor', 'admin')) NOT NULL,
+    password TEXT NOT NULL,
+    role VARCHAR(20) CHECK (role IN ('STUDENT', 'INSTRUCTOR', 'ADMIN')) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -84,11 +82,11 @@ CREATE TABLE certificates (
 );
 
 -- Insert users (admin, instructor, and students)
-INSERT INTO users (username, email, password_hash, role) VALUES 
-('admin_user', 'admin@example.com', 'hashed_password_admin', 'admin'),
-('instructor_1', 'instructor1@example.com', 'hashed_password_inst1', 'instructor'),
-('student_1', 'student1@example.com', 'hashed_password_stud1', 'student'),
-('student_2', 'student2@example.com', 'hashed_password_stud2', 'student');
+INSERT INTO users (name, email, password, role) VALUES 
+('admin_user', 'admin@example.com', 'hashed_password_admin', 'ADMIN'),
+('instructor_1', 'instructor1@example.com', 'hashed_password_inst1', 'INSTRUCTOR'),
+('student_1', 'student1@example.com', 'hashed_password_stud1', 'STUDENT'),
+('student_2', 'student2@example.com', 'hashed_password_stud2', 'STUDENT');
 
 -- Insert courses
 INSERT INTO courses (title, description, instructor_id) VALUES 
@@ -133,5 +131,3 @@ INSERT INTO payments (user_id, course_id, amount, payment_status) VALUES
 -- Insert certificates
 INSERT INTO certificates (user_id, course_id) VALUES 
 (3, 1); -- student_1 completed AI course
-
-*/
