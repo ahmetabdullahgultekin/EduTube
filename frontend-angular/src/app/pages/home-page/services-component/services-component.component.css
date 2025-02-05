@@ -1,0 +1,9 @@
+.owl-item {
+  width: 212px;
+  margin-right: 30px;
+}
+
+.owl-stage {
+  width: max-content;
+  transition: transform 0.5s;
+}

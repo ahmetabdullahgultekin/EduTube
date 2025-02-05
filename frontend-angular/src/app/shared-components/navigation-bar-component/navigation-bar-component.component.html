@@ -5,29 +5,30 @@
       <div class="col-12">
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
-          <a class="logo" href="index.html">
-            Edu Meeting
+          <a class="logo" routerLink="/home" routerLinkActive="active">
+            EduTube
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li class="scroll-to-section">
-              <a class="" href="#top" routerLink="/home" routerLinkActive="active">
+            <li class="has-sub">
+              <a routerLink="/home" routerLinkActive="active">
                 Home
               </a>
+              <ul class="sub-menu">
+                <li class="scroll-to-section"><a fragment="top" routerLink="/home">Top</a></li>
+                <li class="scroll-to-section"><a fragment="services" routerLink="/home">Services</a></li>
+                <li class="scroll-to-section"><a fragment="meetings" routerLink="/home">Meetings</a></li>
+                <li class="scroll-to-section"><a fragment="apply" routerLink="/home">Apply</a></li>
+                <li class="scroll-to-section"><a fragment="courses" routerLink="/home">Courses</a></li>
+                <li class="scroll-to-section"><a fragment="our-facts" routerLink="/home">Our Facts</a></li>
+                <li class="scroll-to-section"><a fragment="contact" routerLink="/home">Contact Us</a></li>
+              </ul>
             </li>
-            <li>
+            <li class="has-sub">
               <a routerLink="/meetings" routerLinkActive="active">
                 Meetings
               </a>
-            </li>
-            <li class="scroll-to-section">
-              <a href="#apply" routerLink="/apply" routerLinkActive="active">
-                Apply Now
-              </a>
-            </li>
-            <li class="has-sub">
-              <a href="javascript:void(0)">Pages</a>
               <ul class="sub-menu">
                 <li>
                   <a routerLink="/upcoming-meetings" routerLinkActive="active">
@@ -39,14 +40,57 @@
                     Meeting Details
                   </a>
                 </li>
+                <li>
+                  <a routerLink="/meetings" routerLinkActive="active">
+                    All Meetings
+                  </a>
+                </li>
               </ul>
             </li>
-            <li class="scroll-to-section"><a href="#courses">Courses</a></li>
-            <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
-            <li class="scroll-to-section"><a routerLink="/test" routerLinkActive="active">Test</a></li>
-            <li class="scroll-to-section"><a routerLink="/video-test" routerLinkActive="active">Video Test</a></li>
-            <li class="scroll-to-section"><a routerLink="/register" routerLinkActive="active">Register</a></li>
-            <li class="scroll-to-section"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+            <li>
+              <a routerLink="/contact" routerLinkActive="active">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a routerLink="/about" routerLinkActive="active">
+                About Us
+              </a>
+            </li>
+            <li class="has-sub">
+              <a routerLink="/test" routerLinkActive="active">
+                Test
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a routerLink="/test" routerLinkActive="active">
+                    Test
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="/video-test" routerLinkActive="active">
+                    Video Test
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a routerLink="/login" routerLinkActive="active">
+                <i class="fa fa-user"></i>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a routerLink="/register" routerLinkActive="active">
+                    Register
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="/login" routerLinkActive="active">
+                    Login
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
           <a class='menu-trigger'>
             <span>Menu</span>
