@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Video} from '../../interfaces/video';
+import {Video} from '../../../interfaces/video';
 import {FormsModule} from '@angular/forms';
 import {NgForOf, NgIf} from '@angular/common';
-import {VideoService} from '../../services/video.service';
+import {VideoService} from '../../../services/video.service';
 import {HttpClientModule} from '@angular/common/http';
 
 @Component({

@@ -1,0 +1,11 @@
+<div class="course-detail">
+  <mat-card *ngIf="course">
+    <mat-card-title>{{ course.title }}</mat-card-title>
+    <mat-card-subtitle>Instructor: {{ course.instructor }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ course.description }}</p>
+      <p><strong>Created At:</strong> {{ course.createdAt }}</p>
+    </mat-card-content>
+    <button color="primary" mat-raised-button>Enroll</button>
+  </mat-card>
+</div>

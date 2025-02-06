@@ -13,39 +13,47 @@ export const routes: Routes = [
   },
   {
     path: 'meetings',
-    loadComponent: () => import('./pages/meetings-page/meetings-page.component').then(m => m.MeetingsPageComponent)
+    loadComponent: () => import('./pages/meeting-pages/meetings-page/meetings-page.component').then(m => m.MeetingsPageComponent)
   },
   {
     path: 'meeting-details',
-    loadComponent: () => import('./pages/meeting-details-page/meeting-details-page.component').then(m => m.MeetingDetailsPageComponent)
+    loadComponent: () => import('./pages/meeting-pages/meeting-details-page/meeting-details-page.component').then(m => m.MeetingDetailsPageComponent)
   },
   {
     path: 'about',
-    loadComponent: () => import('./pages/about-page/about-page.component').then(m => m.AboutPageComponent)
+    loadComponent: () => import('./pages/company-related-pages/about-page/about-page.component').then(m => m.AboutPageComponent)
   },
   {
     path: 'contact',
-    loadComponent: () => import('./pages/contact-page/contact-page.component').then(m => m.ContactPageComponent)
+    loadComponent: () => import('./pages/company-related-pages/contact-page/contact-page.component').then(m => m.ContactPageComponent)
   },
   {
     path: 'test',
-    loadComponent: () => import('./pages/test-page/test-page.component').then(m => m.TestPageComponent)
+    loadComponent: () => import('./pages/test-pages/test-page/test-page.component').then(m => m.TestPageComponent)
   },
   {
     path: 'video-test',
-    loadComponent: () => import('./pages/video-test/video-test.component').then(m => m.VideoTestComponent)
+    loadComponent: () => import('./pages/test-pages/video-test/video-test.component').then(m => m.VideoTestComponent)
   },
   {
     path: 'register',
-    loadComponent: () => import('./pages/register-page/register-page.component').then(m => m.RegisterPageComponent)
+    loadComponent: () => import('./pages/profile-pages/register-page/register-page.component').then(m => m.RegisterPageComponent)
   },
   {
     path: 'login',
-    loadComponent: () => import('./pages/login-page/login-page.component').then(m => m.LoginPageComponent)
+    loadComponent: () => import('./pages/profile-pages/login-page/login-page.component').then(m => m.LoginPageComponent)
   },
   {
     path: 'dashboard',
-    loadComponent: () => import('./pages/dashboard-page/dashboard-page.component').then(m => m.DashboardPageComponent)
+    loadComponent: () => import('./pages/profile-pages/dashboard-page/dashboard-page.component').then(m => m.DashboardPageComponent)
+  },
+  {
+    path: 'courses',
+    loadComponent: () => import('./pages/course-pages/course-list-page/course-list-page.component').then(m => m.CourseListPageComponent)
+  },
+  {
+    path: 'course-details/:id',
+    loadComponent: () => import('./pages/course-pages/course-detail-page/course-detail-page.component').then(m => m.CourseDetailPageComponent)
   },
   {
     path: '**',

@@ -5,3 +5,12 @@ body {
   padding: 0;
   background-image: url(/assets/images/meetings-page-bg.jpg) !important;
 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

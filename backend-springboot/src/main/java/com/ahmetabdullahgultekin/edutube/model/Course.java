@@ -30,5 +30,21 @@ public class Course {
     private BigDecimal price;
 
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
 
