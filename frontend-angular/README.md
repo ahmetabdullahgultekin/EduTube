@@ -1,59 +1,132 @@
-# FrontendAngular
+# Angular Course Management Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+This is an Angular-based web application for managing and displaying courses. The application allows users to view a list of courses and navigate to specific sections of the page with smooth scrolling functionality.
 
-## Development server
+## Table of Contents
 
-To start a local development server, run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Scripts](#scripts)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-ng serve
+---
+
+## Features
+
+- **Course List**: Displays a list of courses fetched from a backend service.
+- **Smooth Scrolling**: Navigate to specific sections of the page without reloading.
+- **Responsive Design**: Fully responsive UI for various screen sizes.
+- **Material Design**: Uses Angular Material for a modern and clean design.
+- **Dynamic Routing**: Supports dynamic navigation with Angular Router.
+
+---
+
+## Technologies Used
+
+- **Frontend**: Angular, TypeScript, HTML, CSS
+- **Styling**: Angular Material, Custom CSS
+- **Backend Integration**: HTTP Client for API calls
+- **Build Tool**: Angular CLI
+- **Package Manager**: npm
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd repo-name
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   ng serve
+   ```
+
+5. Open the application in your browser:
+   ```
+   http://localhost:4200
+   ```
+
+---
+
+## Usage
+
+### Viewing Courses
+- Navigate to the "Courses" page to view the list of available courses.
+- Each course is displayed in a card format with details like title, description, and more.
+
+### Smooth Scrolling
+- Use the navigation menu to scroll to specific sections of the page (e.g., Courses, Services, Apply, Contact Us).
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── pages/
+│   │   ├── course-pages/
+│   │   │   ├── course-list-page/
+│   │   │   │   ├── course-list-page.component.ts
+│   │   │   │   ├── course-list-page.component.html
+│   │   │   │   ├── course-list-page.component.css
+│   ├── services/
+│   │   ├── course.service.ts
+│   ├── interfaces/
+│   │   ├── course.ts
+│   ├── app.module.ts
+│   ├── app.config.ts
+├── assets/
+│   ├── css/
+│   │   ├── templatemo-edu-meeting.css
+├── index.html
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Scripts
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Start Development Server**: `ng serve`
+- **Build for Production**: `ng build`
+- **Run Unit Tests**: `ng test`
+- **Run End-to-End Tests**: `ng e2e`
+- **Lint Code**: `ng lint`
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Contributing
 
-```bash
-ng generate --help
-```
+Contributions are welcome! Please follow these steps:
 
-## Building
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature description"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
